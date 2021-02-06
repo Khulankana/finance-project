@@ -1,19 +1,37 @@
+// User interface controller
 var uiController = (function() {
-    function add(m) {
-          console.log("private add " + m)
-    }
-
-    return {
-      publicAdd: function(msg) {
-            console.log( " public " + msg)
-          }
-};
+ 
 })();
 
+
+// Finance controller
 var financeController = (function() {
    
 })();
 
+
+// app controller 
 var appController = (function(uCtrl, fCtrl) {
-      uiController.publicAdd(50);
+      var ctrlAddItem = function( ) {
+             // Оруулсан өгөгдлийг дэлгэцнээс олж авах
+
+             // Олж авсан өгөгдлөө санхүүгийн контроллер луу памжуулах, тэнд хадгалах
+
+            // Олж авсан өгөдлүүдээ дэлгэц дээрээ тохирох хэсэгт гаргана
+
+            //Төсвийг тооцоолно
+
+            // Эцсийн үлдэгдэл, тооцоог харуулах
+      }
+
+      document.querySelector('.add__btn').addEventListener('click', function() {
+            ctrlAddItem();
+      })
+
+      document.addEventListener('keypress', function(event) {
+            if(event.keyCode === 13 || event.witch === 13) {
+                  ctrlAddItem();
+            }
+      })
+
 })(uiController, financeController );
